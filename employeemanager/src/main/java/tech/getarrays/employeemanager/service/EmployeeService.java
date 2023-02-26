@@ -40,13 +40,13 @@ public Employee findEmployeeById(Long id){
             orElseThrow(() ->new UserNotFoundException("user by id"+"was not found"));
     }
 
-/*public void deleteEmployee(Long id){
+public void deleteEmployee(Long id){
 
     employeeRepo.deleteEmployeeById(id);
 }
 
 
-*/
+
 
 }
 
