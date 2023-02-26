@@ -24,7 +24,7 @@ public class EmployeeResource {
 
     }
 
-   /* private final EmployeeService employeeService;
+    private final EmployeeService employeeService;
 
     public EmployeeResource(EmployeeService employeeService) {
 
@@ -35,7 +35,7 @@ public class EmployeeResource {
         List<Employee> employees =employeeService.findAllEmployee();
         return new ResponseEntity<>(employees, HttpStatus.OK);
     }
-    */
+    
     @GetMapping("/find/{id}")
     public ResponseEntity<Employee> getEmployeeById(@PathVariable("id") Long id){
         Employee employee =EmployeeService.findEmployeeById(id);
@@ -47,7 +47,7 @@ public class EmployeeResource {
       Employee newEmployee=EmployeeService.addEmployee(employee)  ;
     return new ResponseEntity<>(newEmployee, HttpStatus.CREATED);
 }
-/*
+
     @PutMapping("/update")
     public ResponseEntity<Employee> updateEmployee(@RequestBody Employee employee){
         Employee updateEmployee=employeeService.updateEmployee(employee)  ;
@@ -58,6 +58,6 @@ public class EmployeeResource {
         employeeService.deleteEmployee(id)  ;
         return new ResponseEntity<>( HttpStatus.OK);
     }
-    */
+    
 
 }
